@@ -1,18 +1,18 @@
 :root {
-	--bg: #0b0d12;
-	--surface: #12161d;
-	--surface-2: #171c24;
-	--text: #e8ecf3;
-	--text-muted: #b9c1cf;
-	--brand-200: #9fd8ff;
-	--brand-300: #73c5ff;
-	--brand-400: #3caeff;
-	--brand-500: #0b92ff;
-	--brand-600: #0b6ed1;
-	--accent: #24d18b;
+	--bg: #020c06;
+	--surface: #06160e;
+	--surface-2: #0b2216;
+	--text: #e1ffe8;
+	--text-muted: #8ab095;
+	--brand-200: #88cc00;
+	--brand-300: #669900;
+	--brand-400: #558000;
+	--brand-500: #406000;
+	--brand-600: #2a4000;
+	--accent: #118844;
 	--danger: #ff5a6b;
 	--radius: 12px;
-	--container: 2000px;
+	--container: 1120px;
 }
 
 * {
@@ -31,12 +31,27 @@ html:focus-within {
 
 body {
 	margin: 0;
-	font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji", sans-serif;
+	font-family: 'Inter', system-ui, -apple-system, sans-serif;
 	color: var(--text);
-	background: radial-gradient(1200px 600px at 20% -10%, rgba(59, 255, 85, 0.12), transparent),
-		radial-gradient(900px 600px at 100% 0%, rgba(36, 209, 65, 0.08), transparent),
-		var(--bg);
+	background-color: var(--bg);
+	background-image:
+		linear-gradient(rgba(18, 255, 90, 0.03) 1px, transparent 1px),
+		linear-gradient(90deg, rgba(18, 255, 90, 0.03) 1px, transparent 1px),
+		radial-gradient(circle at 50% 50%, rgba(150, 240, 12, 0.1), transparent 60%);
+	background-size: 40px 40px, 40px 40px, 100% 100%;
 	line-height: 1.6;
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+}
+
+main {
+	flex: 1;
+}
+
+/* Ensure subpages start at the same visual height as the index masthead */
+main>.section:first-child {
+	padding-top: 6rem;
 }
 
 img,
@@ -76,7 +91,7 @@ svg {
 	position: sticky;
 	top: 0;
 	z-index: 20;
-	background: rgba(11, 18, 13, 0.7);
+	background: rgba(11, 13, 18, 0.7);
 	backdrop-filter: saturate(120%) blur(8px);
 	border-bottom: 1px solid rgba(255, 255, 255, 0.06);
 }
@@ -85,7 +100,10 @@ svg {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	padding: 1.2rem 0;
+	padding: 2rem 2rem;
+	width: 100%;
+	max-width: none;
+	margin-inline: 0;
 }
 
 .brand {
@@ -103,11 +121,49 @@ svg {
 	height: 28px;
 	border-radius: 6px;
 	display: block;
-	box-shadow: 0 2px 10px rgba(11, 255, 11, 0.25);
+	box-shadow: 0 2px 10px rgba(11, 146, 255, 0.25);
 }
 
 .brand-text {
+	font-family: sans-serif;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	color: #96f00c;
+	/* Bright Green */
+	text-shadow: none;
+	/* No shadow/background */
+	font-weight: 700;
 	font-size: 1.05rem;
+}
+
+.masthead-title-glow {
+	font-family: sans-serif;
+	font-size: clamp(3rem, 5vw + 2rem, 5rem);
+	color: #020c06;
+	/* Almost black top layer */
+	text-transform: uppercase;
+	/* "Other letter underneath" effect: Stronger, Bottom-Left direction */
+	text-shadow:
+		-1px -1px 0 #96f00c,
+		1px -1px 0 #96f00c,
+		-1px 1px 0 #96f00c,
+		1px 1px 0 #96f00c,
+		-8px 6px 0px #7cc700;
+	/* Deep solid shadow to bottom-left */
+	line-height: 1;
+	margin-bottom: 0.5rem;
+}
+
+.masthead-sub-names {
+	font-size: 1.2rem;
+	color: #e1ffe8;
+	background: linear-gradient(90deg, transparent, rgba(40, 80, 0, 0.6), transparent);
+	padding: 1rem 2rem;
+	border-radius: 50px;
+	border: 1px solid rgba(80, 160, 0, 0.4);
+	display: inline-block;
+	margin-top: 2rem;
+	text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8);
 }
 
 .site-nav ul {
@@ -168,14 +224,18 @@ h3 {
 /* Buttons */
 .btn {
 	display: inline-block;
-	border: 1px solid transparent;
-	background: linear-gradient(180deg, var(--brand-500), var(--brand-600));
-	color: #fff;
+	border: 1px solid rgba(150, 240, 12, 0.3);
+	/* Subtle neon border */
+	background: linear-gradient(180deg, #1e4a05, #112b02);
+	/* Rich Dark Green, less muddy */
+	color: #adfa1d;
+	/* Bright Neon Green text */
 	padding: .7rem 1rem;
-	border-radius: 10px;
-	font-weight: 600;
+	border-radius: 12px;
+	font-weight: 700;
 	text-decoration: none;
-	box-shadow: 0 6px 18px rgba(255, 255, 255, 0.25);
+	text-transform: uppercase;
+	letter-spacing: 0.5px;
 }
 
 .btn:hover {
@@ -204,7 +264,7 @@ h3 {
 	padding: 6rem 0 2.5rem;
 	text-align: center;
 	background:
-		radial-gradient(900px 600px at 80% -10%, rgba(11, 255, 52, 0.18), transparent),
+		radial-gradient(900px 600px at 80% -10%, rgba(11, 146, 255, 0.18), transparent),
 		linear-gradient(180deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0));
 }
 
@@ -218,7 +278,7 @@ h3 {
 	width: clamp(90px, 9vw + 60px, 128px);
 	height: auto;
 	border-radius: 14px;
-	box-shadow: 0 12px 40px rgba(11, 255, 52, 0.25);
+	box-shadow: 0 12px 40px rgba(11, 146, 255, 0.25);
 }
 
 .brand-name-large {
@@ -247,15 +307,28 @@ h3 {
 	padding: 4rem 0;
 }
 
-.section-alt {
-	background: linear-gradient(180deg, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0));
-	border-top: 1px solid rgba(255, 255, 255, 0.06);
-	border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+/* Page Hero for Subpages */
+.page-hero {
+	padding: 8rem 0 3rem;
+	/* Increased top padding to match masthead/clear header */
+	text-align: center;
+	background:
+		radial-gradient(600px 400px at 50% 0%, rgba(11, 146, 255, 0.1), transparent),
+		linear-gradient(180deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0));
 }
 
-.section-intro {
-	color: var(--text-muted);
-	margin: 0 0 1.5rem 0;
+.page-hero h1 {
+	font-size: clamp(2.5rem, 4vw + 1rem, 4rem);
+	margin-bottom: 1rem;
+	/* Optional: Add a subtle glow to subpage titles too, if desired */
+	text-shadow: 0 0 15px rgba(150, 240, 12, 0.2);
+}
+
+.page-hero .section-intro {
+	max-width: 700px;
+	margin-left: auto;
+	margin-right: auto;
+	font-size: 1.2rem;
 }
 
 /* Grid */
