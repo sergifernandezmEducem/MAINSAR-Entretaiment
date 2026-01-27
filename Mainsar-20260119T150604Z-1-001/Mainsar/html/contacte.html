@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ca">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contacte — MAINSAR Entertainment</title>
+  <meta name="description" content="Posa't en contacte amb MAINSAR Entertainment per a projectes de videojocs." />
+  <link rel="icon" href="../img/mainsar_fav_icon.png" sizes="any">
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css" />
+  <script src="../js/translations.js"></script>
+  <script src="../js/i18n.js"></script>
+</head>
+
+<body>
+  <a class="skip-link" href="#contingut">Salta al contingut</a>
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a class="brand" href="../index.html" aria-label="Inici MAINSAR">
+        <span class="brand-text" data-i18n="hero_title_1">MAINSAR</span>
+      </a>
+      <div class="header-right">
+        <nav class="site-nav" aria-label="Principal">
+          <ul>
+            <li><a href="serveis.html" data-i18n="nav_games">Jocs</a></li>
+            <li><a href="solucions.html" data-i18n="nav_team">Equip</a></li>
+            <li><a href="projectes.html" data-i18n="nav_news">Notícies</a></li>
+            <li><a class="btn btn-small" aria-current="page" href="contacte.html" data-i18n="nav_contact">Contacte</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="lang-switcher">
+          <select id="lang-select" class="lang-select">
+            <option value="ca">Català</option>
+            <option value="es">Español</option>
+            <option value="en">English</option>
+            <option value="fr">Français</option>
+            <option value="de">Deutsch</option>
+            <option value="ja">日本語</option>
+            <option value="it">Italiano</option>
+            <option value="pt">Português</option>
+          </select>
+        </div>
+      </div>
+    </div>
+  </header>
+  <main id="contingut">
+    <section class="section page-hero" aria-labelledby="contacte-title">
+      <div class="container">
+        <h1 id="contacte-title" data-i18n="contact_title">Contacte</h1>
+        <p class="section-intro" data-i18n="contact_intro">Explica’ns què necessites i et proposem la millor opció per
+          al teu pressupost i
+          objectius.</p>
+      </div>
+    </section>
+    <section class="section">
+      <div class="container">
+        <form class="contact-form" action="#" method="post">
+          <div class="grid two">
+            <div class="form-field">
+              <label for="nom" data-i18n="form_name">Nom</label>
+              <input id="nom" name="nom" type="text" autocomplete="name" required />
+            </div>
+            <div class="form-field">
+              <label for="empresa" data-i18n="form_company">Empresa</label>
+              <input id="empresa" name="empresa" type="text" autocomplete="organization" />
+            </div>
+          </div>
+          <div class="grid two">
+            <div class="form-field">
+              <label for="email" data-i18n="form_email">Correu electrònic</label>
+              <input id="email" name="email" type="email" autocomplete="email" required />
+            </div>
+            <div class="form-field">
+              <label for="telefon" data-i18n="form_phone">Telèfon</label>
+              <input id="telefon" name="telefon" type="tel" autocomplete="tel" />
+            </div>
+          </div>
+          <div class="form-field">
+            <label for="missatge" data-i18n="form_message">Missatge</label>
+            <textarea id="missatge" name="missatge" rows="5" required></textarea>
+          </div>
+          <div class="form-actions">
+            <button class="btn" type="submit" data-i18n="form_submit">Enviar consulta</button>
+          </div>
+        </form>
+        <p class="small help">Nota: Substitueix l’acció del formulari per un correu/endpoint corporatiu quan ho tingueu
+          definit.</p>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer" role="contentinfo">
+    <div class="container footer-inner">
+      <div>
+        <strong>MAINSAR Entertainment</strong>
+        <p class="small" data-i18n="footer_slogan">Creant els mons del demà, avui.</p>
+      </div>
+      <nav aria-label="Peu de pàgina">
+        <ul>
+          <li><a href="serveis.html" data-i18n="nav_games">Jocs</a></li>
+          <li><a href="solucions.html" data-i18n="nav_team">Equip</a></li>
+          <li><a href="projectes.html" data-i18n="nav_news">Notícies</a></li>
+          <li><a aria-current="page" href="contacte.html" data-i18n="nav_contact">Contacte</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="container">
+      <p class="small mute" data-i18n="footer_copyright">© 2026 MAINSAR Entertainment</p>
+    </div>
+  </footer>
+</body>
+
+</html>

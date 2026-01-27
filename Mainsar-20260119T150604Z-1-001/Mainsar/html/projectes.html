@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ca">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Notícies — MAINSAR Entertainment</title>
+  <meta name="description" content="Segueix l'actualitat i els projectes de MAINSAR Entertainment." />
+  <link rel="icon" href="../img/mainsar_fav_icon.png" sizes="any">
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css" />
+  <script src="../js/translations.js"></script>
+  <script src="../js/i18n.js"></script>
+</head>
+
+<body>
+  <a class="skip-link" href="#contingut">Salta al contingut</a>
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a class="brand" href="../index.html" aria-label="Inici MAINSAR">
+        <span class="brand-text" data-i18n="hero_title_1">MAINSAR</span>
+      </a>
+      <div class="header-right">
+        <nav class="site-nav" aria-label="Principal">
+          <ul>
+            <li><a href="serveis.html" data-i18n="nav_games">Jocs</a></li>
+            <li><a href="solucions.html" data-i18n="nav_team">Equip</a></li>
+            <li><a aria-current="page" href="projectes.html" data-i18n="nav_news">Notícies</a></li>
+            <li><a class="btn btn-small" href="contacte.html" data-i18n="nav_contact">Contacte</a></li>
+          </ul>
+        </nav>
+        <div class="lang-switcher">
+          <select id="lang-select" class="lang-select">
+            <option value="ca">Català</option>
+            <option value="es">Español</option>
+            <option value="en">English</option>
+            <option value="fr">Français</option>
+            <option value="de">Deutsch</option>
+            <option value="ja">日本語</option>
+            <option value="it">Italiano</option>
+            <option value="pt">Português</option>
+          </select>
+        </div>
+      </div>
+    </div>
+  </header>
+  <main id="contingut">
+    <section class="section page-hero" aria-labelledby="noticies-title">
+      <div class="container">
+        <h1 id="noticies-title" data-i18n="news_title">Últimes Notícies</h1>
+        <p class="section-intro" data-i18n="news_intro">El que estem coent als nostres estudis.</p>
+      </div>
+    </section>
+    <section class="section">
+      <div class="container">
+        <div class="grid three">
+          <article class="card">
+            <h3 data-i18n="news_1_title">Nou projecte anunciat</h3>
+            <p class="small mute" data-i18n="news_1_date">12 de Gener, 2026</p>
+            <p data-i18n="news_1_text">Ens complau anunciar que hem començat la pre-producció del nostre primer RPG
+              d'acció.</p>
+          </article>
+          <article class="card">
+            <h3 data-i18n="news_2_title">Mainsar al Gaming Fest</h3>
+            <p class="small mute" data-i18n="news_2_date">20 de Desembre, 2025</p>
+            <p data-i18n="news_2_text">El nostre equip va estar present al festival de videojocs local presentant una
+              demo tècnica.</p>
+          </article>
+          <article class="card">
+            <h3 data-i18n="news_3_title">Unim forces</h3>
+            <p class="small mute" data-i18n="news_3_date">15 de Novembre, 2025</p>
+            <p data-i18n="news_3_text">Donem la benvinguda al nostre nou artista conceptual, preparats per portar l'art
+              al següent nivell.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer" role="contentinfo">
+    <div class="container footer-inner">
+      <div>
+        <strong>MAINSAR Entertainment</strong>
+        <p class="small" data-i18n="footer_slogan">Creant els mons del demà, avui.</p>
+      </div>
+      <nav aria-label="Peu de pàgina">
+        <ul>
+          <li><a href="serveis.html" data-i18n="nav_games">Jocs</a></li>
+          <li><a href="solucions.html" data-i18n="nav_team">Equip</a></li>
+          <li><a aria-current="page" href="projectes.html" data-i18n="nav_news">Notícies</a></li>
+          <li><a href="contacte.html" data-i18n="nav_contact">Contacte</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="container">
+      <p class="small mute" data-i18n="footer_copyright">© 2026 MAINSAR Entertainment</p>
+    </div>
+  </footer>
+</body>
+
+</html>
