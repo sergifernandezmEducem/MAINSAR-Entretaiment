@@ -25,7 +25,19 @@
             </a>
             <nav class="site-nav" aria-label="Principal">
                 <ul>
-                    <li><a href="data.mp4" class="video-link">Jocs</a></li>
+                    <li><a href="#" class="video-link" onclick="openPopup(event)">Jocs</a></li>
+
+<script>
+function openPopup(e) {
+  e.preventDefault(); 
+  window.open(
+    "e.html",
+    "popupWindow",
+    "width=800,height=600,scrollbars=yes,resizable=yes"
+  );
+}
+</script>
+
                     <li><a href="data.mp4" class="video-link">Equip</a></li>
                     <li><a href="data.mp4" class="video-link">Notícies</a></li>
                     <li><a href="data.mp4" class="btn btn-small video-link">Contacte</a></li>
