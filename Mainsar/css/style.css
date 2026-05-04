@@ -190,13 +190,13 @@ svg {
 .masthead-title-glow {
 	font-family: sans-serif;
 	font-size: clamp(3rem, 5vw + 2rem, 5rem);
-	color: #020c06;
+	color: #96f00c;
 	/* Almost black top layer */
 	text-transform: uppercase;
 	/* "Other letter underneath" effect: Stronger, Bottom-Left direction */
 	text-shadow:
 		-1px -1px 0 #96f00c,
-		1px -1px 0 #96f00c,
+		1px -1px 0 #96f00c,		ºº
 		-1px 1px 0 #96f00c,
 		1px 1px 0 #96f00c,
 		-8px 6px 0px #7cc700;

@@ -89,7 +89,8 @@ const translations = {
         "çsfxdesc": "Disseny sonor atmosfèric i bandes sonores originals que potencien l'experiència.",
         "çnarr": "Disseny narratiu",
         "çnarrdesc": "Guions profunds i diàlegs memorables que donen vida als nostres personatges.",
-        "çnotacontacte": "Nota: Substitueix l’acció del formulari per un correu/endpoint corporatiu quan ho tingueu definit."
+        "çnotacontacte": "Nota: Substitueix l’acció del formulari per un correu/endpoint corporatiu quan ho tingueu definit.",
+        "nav_promo": "Promocions"
     },
     "es": {
         "nav_games": "Juegos",
@@ -181,7 +182,8 @@ const translations = {
         "çsfxdesc": "Diseño sonoro atmosférico y bandas sonoras originales que potencian la experiencia.", 
         "çnarr": "Diseño narrativo", 
         "çnarrdesc": "Guiones profundos y diálogos memorables que dan vida a nuestros personajes.",
-        "çnotacontacte": "Nota: Sustituye la acción del formulario por un correo/endpoint corporativo cuando lo tenga definido."
+        "çnotacontacte": "Nota: Sustituye la acción del formulario por un correo/endpoint corporativo cuando lo tenga definido.",
+        "nav_promo": "Ofertas"
     },
     "en": {
         "nav_games": "Games",
@@ -273,7 +275,8 @@ const translations = {
         "çsfxdesc": "Atmospheric sound design and original soundtracks that enhance the experience.",
         "çnarr": "Narrative Design",
         "çnarrdesc": "Deep scripts and memorable dialogues that bring our characters to life.",
-        "çnotacontacte": "Note: Replace the form action with a corporate email/endpoint when you have it defined."
+        "çnotacontacte": "Note: Replace the form action with a corporate email/endpoint when you have it defined.",
+        "nav_promo": "Sales"
     },
     "fr": {
         "nav_games": "Jeux",
@@ -365,7 +368,8 @@ const translations = {
         "çsfxdesc": "Conception sonore immersive et bandes originales qui enrichissent l'expérience.",
         "çnarr": "Conception narrative",
         "çnarrdesc": "Scénarios profonds et dialogues mémorables qui donnent vie à nos personnages.",
-        "çnotacontacte": "Remarque : Remplacez l’action du formulaire par une adresse e-mail/un point de terminaison d’entreprise lorsque vous l’aurez défini."
+        "çnotacontacte": "Remarque : Remplacez l’action du formulaire par une adresse e-mail/un point de terminaison d’entreprise lorsque vous l’aurez défini.",
+        "nav_promo": "Offres"
     },
     "de": {
         "nav_games": "Spiele",
@@ -457,7 +461,8 @@ const translations = {
         "çsfxdesc": "Atmosphärisches Sounddesign und originelle Soundtracks, die das Spielerlebnis bereichern.",
         "çnarr": "Narratives Design",
         "çnarrdesc": "Tiefgründige Drehbücher und einprägsame Dialoge, die unsere Charaktere zum Leben erwecken.",
-        "çnotacontacte": "Hinweis: Ersetzen Sie die Formularaktion durch eine Firmen-E-Mail-Adresse/einen Firmen-Endpunkt, sobald Sie diese definiert haben."
+        "çnotacontacte": "Hinweis: Ersetzen Sie die Formularaktion durch eine Firmen-E-Mail-Adresse/einen Firmen-Endpunkt, sobald Sie diese definiert haben.",
+        "nav_promo": "Angebote"
     },
     "ja": {
         "nav_games": "ゲーム",
@@ -549,7 +554,8 @@ const translations = {
         "çsfxdesc": "ゲーム体験を向上させる、雰囲気のあるサウンドデザインとオリジナルサウンドトラック。",
         "çnarr": "ナラティブデザイン",
         "çnarrdesc": "キャラクターに命を吹き込む、奥深い脚本と記憶に残るセリフ。",
-        "çnotacontacte": "注: フォーム アクションを定義したら、企業の電子メール/エンドポイントに置き換えます。"
+        "çnotacontacte": "注: フォーム アクションを定義したら、企業の電子メール/エンドポイントに置き換えます。",
+        "nav_promo": "お得情報"
     },
     "it": {
         "nav_games": "Giochi",
@@ -641,7 +647,8 @@ const translations = {
         "çsfxdesc": "Sound design d'atmosfera e colonne sonore originali che arricchiscono l'esperienza.",
         "çnarr": "Narrative Design",
         "çnarrdesc": "Sceneggiature profonde e dialoghi memorabili che danno vita ai nostri personaggi.",
-        "çnotacontacte": "Nota: sostituisci l'azione del modulo con un'e-mail/endpoint aziendale quando è stato definito."
+        "çnotacontacte": "Nota: sostituisci l'azione del modulo con un'e-mail/endpoint aziendale quando è stato definito.",
+        "nav_promo": "Offerte"
     },
     "pt": {
         "nav_games": "Jogos",
@@ -733,6 +740,7 @@ const translations = {
         "çsfxdesc": "Design de som atmosférico e bandas sonoras originais que melhoram a experiência.",
         "çnarr": "Design Narrativo",
         "çnarrdesc": "Argumentos profundos e diálogos memoráveis ​​que dão vida às nossas personagens.",
-        "çnotacontacte": "Nota: Substitua a ação do formulário por um e-mail/endpoint empresarial quando já o tiver definido."
+        "çnotacontacte": "Nota: Substitua a ação do formulário por um e-mail/endpoint empresarial quando já o tiver definido.",
+        "nav_promo": "Ofertas"
     }
 };
