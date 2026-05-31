@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ca">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Equip — MAINSAR Entertainment</title>
+  <meta name="description" content="Coneix l'equip de desenvolupament de videojocs de MAINSAR Entertainment." />
+  <link rel="icon" href="../img/mainsar_fav_icon.png" sizes="any">
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css" />
+  <script src="../js/translations.js"></script>
+  <script src="../js/i18n.js"></script>
+</head>
+
+<body>
+  <a class="skip-link" href="#contingut">Salta al contingut</a>
+<header class="site-header" role="banner">
+        <div class="container header-inner">
+<a class="brand" href="../" aria-label="Inici MAINSAR">
+    <img src="../img/mainsar_fav_icon.png" alt="MAINSAR Entertainment" class="brand-logo-img" />
+</a>
+<div class="header-right">
+    <nav class="site-nav" aria-label="Principal">
+        <ul>
+            <li><a href="../jocs/" data-i18n="nav_games">Jocs</a></li>
+            <li><a href="../equip/" data-i18n="nav_team">Equip</a></li>
+            <li><a href="../noticies/" data-i18n="nav_news">Notícies</a></li>
+            <li><a href="../promocions/" data-i18n="nav_promo">Promocions</a></li>
+            <li><a href="../contacte/" class="btn btn-small" data-i18n="nav_contact">Contacte</a></li>
+        </ul>
+    </nav>
+
+    <div class="lang-switcher">
+        <select id="lang-select" class="lang-select">
+            <option value="ca">Català</option>
+            <option value="es">Español</option>
+            <option value="en">English</option>
+            <option value="fr">Français</option>
+            <option value="de">Deutsch</option>
+            <option value="ja">日本語</option>
+            <option value="it">Italiano</option>
+            <option value="pt">Português</option>
+        </select>
+    </div>
+
+    <button id="theme-toggle" aria-label="Canviar tema" class="btn btn-small">
+        ☀️/🌙
+    </button>
+
+    <script>
+// 1. Immediately check for saved theme settings before rendering to avoid screen flashing
+if (localStorage.getItem('theme') === 'light') {
+    document.body.classList.add('light-mode');
+}
+
+// 2. Control the click toggle action
+const toggleButton = document.getElementById('theme-toggle');
+if (toggleButton) {
+    toggleButton.addEventListener('click', () => {
+        document.body.classList.add('theme-transition');
+        
+        const isLightMode = document.body.classList.toggle('light-mode');
+        
+        // Save the chosen state into browser memory
+        localStorage.setItem('theme', isLightMode ? 'light' : 'dark');
+        
+        setTimeout(() => {
+            document.body.classList.remove('theme-transition');
+        }, 600);
+    });
+}
+    </script>
+</div>
+</div>
+</header>
+  <main id="contingut">
+    <section class="section page-hero" aria-labelledby="equip-title">
+      <div class="container">
+        <h1 id="equip-title" data-i18n="team_title">L'Equip</h1>
+        <p class="section-intro" data-i18n="team_intro">Quatre ments apassionades darrere de cada píxel.</p>
+      </div>
+    </section>
+    <section class="section section-alt">
+      <div class="container">
+        <div class="grid two">
+          <div class="card">
+            <h3>Marc Llandres</h3>
+            <p data-i18n="marc_role">Comptabilitat i administració.</p>
+            <img src="../img/integrantes/marcllandres.jpg" alt="Foto de Marc Llandres" class="intphoto">
+          </div>
+          <div class="card">
+            <h3>Iker Cárdenas</h3>
+            <p data-i18n="iker_role">Desenvolupament de jocs i programador.</p>
+            <img src="../img/integrantes/ikercardenas.jpg" alt="Foto de Iker Cárdenas" class="intphoto">
+          </div>
+          <div class="card">
+            <h3>Arnau Milrado</h3>
+            <p data-i18n="arnau_role">Disseny web i administrador de sistemes.</p>
+            <img src="../img/integrantes/amv-ibiza.jpg" alt="Foto de Arnau Milrado" class="intphoto">
+          </div>
+          <div class="card">
+            <h3>Sergi Fernandez</h3>
+            <p data-i18n="sergi_role">Administrador de sistemes.</p>
+            <img src="../img/integrantes/SergiJobCropped.jpg" alt="Foto de Sergi Fernández" class="intphoto">
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer" role="contentinfo">
+    <div class="container footer-inner">
+      <div>
+        <strong>MAINSAR Entertainment</strong>
+        <p class="small" data-i18n="footer_slogan">Creant els mons del demà, avui.</p>
+      </div>
+      <nav aria-label="Peu de pàgina">
+        <ul>
+          <li><a href="../jocs/" data-i18n="nav_games">Jocs</a></li>
+          <li><a aria-current="page" href="../equip/" data-i18n="nav_team">Equip</a></li>
+          <li><a href="../noticies/" data-i18n="nav_news">Notícies</a></li>
+          <li><a href="../contacte/" data-i18n="nav_contact">Contacte</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="container">
+      <p class="small mute" data-i18n="footer_copyright">© 2026 MAINSAR Entertainment</p>
+    </div>
+  </footer>
+</body>
+
+</html>

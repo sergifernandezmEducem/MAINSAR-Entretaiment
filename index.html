@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="ca">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>MAINSAR Entertainment — Creació de Videojocs</title>
+    <meta name="description"
+        content="Estudio de desenvolupament de videojocs format per Marc Llandres, Iker Cárdenas, Arnau Milrado i Sergi Fernandez." />
+    <link rel="icon" href="img/mainsar_fav_icon.png" sizes="any">
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=MSGothic:wght@400;700&family=Inter:wght@400;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/translations.js"></script>
+    <script src="js/i18n.js"></script>
+</head>
+
+<body>
+    <a class="skip-link" href="#contingut">Salta al contingut</a>
+
+<header class="site-header" role="banner">
+        <div class="container header-inner">
+<a class="brand" href="../" aria-label="Inici MAINSAR">
+    <img src="../img/mainsar_fav_icon.png" alt="MAINSAR Entertainment" class="brand-logo-img" />
+</a>
+<div class="header-right">
+    <nav class="site-nav" aria-label="Principal">
+        <ul>
+            <li><a href="../jocs/" data-i18n="nav_games">Jocs</a></li>
+            <li><a href="../equip/" data-i18n="nav_team">Equip</a></li>
+            <li><a href="../noticies/" data-i18n="nav_news">Notícies</a></li>
+            <li><a href="../promocions/" data-i18n="nav_promo">Promocions</a></li>
+            <li><a href="../contacte/" class="btn btn-small" data-i18n="nav_contact">Contacte</a></li>
+        </ul>
+    </nav>
+
+    <div class="lang-switcher">
+        <select id="lang-select" class="lang-select">
+            <option value="ca">Català</option>
+            <option value="es">Español</option>
+            <option value="en">English</option>
+            <option value="fr">Français</option>
+            <option value="de">Deutsch</option>
+            <option value="ja">日本語</option>
+            <option value="it">Italiano</option>
+            <option value="pt">Português</option>
+        </select>
+    </div>
+
+    <button id="theme-toggle" aria-label="Canviar tema" class="btn btn-small">
+        ☀️/🌙
+    </button>
+
+    <script>
+if (localStorage.getItem('theme') === 'light') {
+    document.body.classList.add('light-mode');
+}
+
+const toggleButton = document.getElementById('theme-toggle');
+if (toggleButton) {
+    toggleButton.addEventListener('click', () => {
+        document.body.classList.add('theme-transition');
+        
+        const isLightMode = document.body.classList.toggle('light-mode');
+        
+        localStorage.setItem('theme', isLightMode ? 'light' : 'dark');
+        
+        setTimeout(() => {
+            document.body.classList.remove('theme-transition');
+        }, 600);
+    });
+}
+    </script>
+</div>
+</div>
+</header>
+
+    <main id="contingut">
+        <section class="masthead" aria-labelledby="masthead-title">
+            <div class="container">
+                <h1 id="masthead-title" class="masthead-title-glow">
+                    <div data-i18n="hero_title_1">MAINSAR</div>
+                    <div data-i18n="hero_title_2">ENTERTAINMENT</div>
+                </h1>
+                <div class="masthead-sub-names" data-i18n="hero_names">
+                    Marc Llandres, Iker Cárdenas, Arnau Milrado, Sergi Fernandez
+                </div>
+            </div>
+        </section>
+
+        <section id="sobre" class="section section-alt" aria-labelledby="sobre-title">
+            <div class="container">
+                <h2 id="sobre-title"><a href="#" style="color:inherit;text-decoration:none;"
+                        data-i18n="about_title">Sobre
+                        MAINSAR</a></h2>
+                <p class="lead" data-i18n="about_lead">Som una empresa de quatre treballadors dedicats a crear, desevolupar i publicar videojocs indies utilitzant eines que no son gaire conegudes, com PICO-8 o Ren'Py, per a ensenyar al públic el seu veritable potencial.</p>
+                <div class="grid three values">
+                    <div class="value">
+                        <h3 data-i18n="about_val1_title">Innovació</h3>
+                        <p data-i18n="about_val1_desc">Fem possible la creació de jocs en nous motors en els que no s'han vist mai.</p>
+                    </div>
+                    <div class="value">
+                        <h3 data-i18n="about_val2_title">Creativitat</h3>
+                        <p data-i18n="about_val2_desc">Dissenyem mons immersius que atrapen des del primer
+                            minut.</p>
+                    </div>
+                    <div class="value">
+                        <h3 data-i18n="about_val3_title">Passió</h3>
+                        <p data-i18n="about_val3_desc">Cada línia de codi i cada píxel està fet amb amor pels videojocs.
+                        </p>
+                    </div>
+                </div>
+                <div class="actions">
+                    <a class="btn" href="../contacte/" data-i18n="btn_contact">Contacta'ns</a>
+                    <a class="btn btn-ghost" href="../jocs/" data-i18n="btn_services">Els nostres jocs</a>
+                </div>
+            </div>
+
+
+        </section>
+
+<section id="serveis" class="section" aria-labelledby="serveis-title">
+    <div class="container serveis-container">
+        
+        <div class="serveis-content">
+            <h2 id="serveis-title">
+                <a href="#" style="color:inherit;text-decoration:none;" data-i18n="what_we_do">Què fem</a>
+            </h2>
+            <p class="section-intro" data-i18n="what_we_do_intro">Creem videojocs des del concepte inicial fins a la publicació final.</p>
+            
+            <div class="grid cards">
+                <article class="card">
+                    <h3 data-i18n="çgamedev">Game Development</h3>
+                    <p data-i18n="çgamedevdesc">Programació de videojocs completament indies utilitzant els motors gràfics Ren'py i PICO-8.</p>
+                </article>
+                <article class="card">
+                    <h3 data-i18n="çlvld">Level Design</h3>
+                    <p data-i18n="çlvlddesc">Creació d'entorns desafiants i divertits alhora.</p>
+                </article>
+                <article class="card">
+                    <h3 data-i18n="ç2dart">Art 2D i Disseny Visual</h3>
+                    <p data-i18n="ç2dartdesc">Creació d'art adaptat a cada projecte: des d'il·lustracions digitals per a novel·les visuals en Ren'Py fins a dissenys en pixel art de 8 bits per a PICO-8.</p>
+                </article>
+                <article class="card">
+                    <h3 data-i18n="çsfx">Soundtrack & SFX</h3>
+                    <p data-i18n="çsfxdesc">Disseny sonor atmosfèric i bandes sonores originals que potencien l'experiència.</p>
+                </article>
+            </div>
+        </div>
+
+        <div class="mid-page-logo-container">
+            <img src="../img/modern_mainsar_betterlogo_green.png" alt="MAINSAR Entertainment Logo" class="mid-page-logo" />
+        </div>
+
+    </div>
+</section>
+
+<section id="equip" class="section" aria-labelledby="equip-title">
+            <div class="container">
+                <h2 id="quisom-title">
+                    <a href="../equip/" style="color:inherit;text-decoration:none;" data-i18n="team_title">L'equip</a>
+                </h2>
+                
+                <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.5rem; margin-top: 2rem;">
+                    <article class="card text-center" style="background: var(--surface); border: 1px solid rgba(255, 255, 255, 0.06); border-radius: var(--radius); padding: 1.5rem; text-align: center; pointer-events: none;">
+                        <img src="../img/integrantes/inici_marcllandres.jpg" alt="Foto de Marc Llandres" style="width: 100%; aspect-ratio: 4/3; border-radius: 6px; margin-bottom: 1rem; object-fit: cover;" />
+                        <h3 style="font-size: 1.2rem; margin-bottom: 0.25rem;">Marc Llandres</h3>
+                        <p style="color: var(--text-muted); margin: 0; font-size: 0.95rem;" data-i18n="marc_role">Comptabilitat i administració.</p>
+                    </article>
+
+                    <article class="card text-center" style="background: var(--surface); border: 1px solid rgba(255, 255, 255, 0.06); border-radius: var(--radius); padding: 1.5rem; text-align: center; pointer-events: none;">
+                        <img src="../img/integrantes/inici_ikercardenas.jpg" alt="Foto de Iker Cárdenas" style="width: 100%; aspect-ratio: 4/3; border-radius: 6px; margin-bottom: 1rem; object-fit: cover;" />
+                        <h3 style="font-size: 1.2rem; margin-bottom: 0.25rem;">Iker Cárdenas</h3>
+                        <p style="color: var(--text-muted); margin: 0; font-size: 0.95rem;" data-i18n="iker_role">Desenvolupament de jocs i programador.</p>
+                    </article>
+
+                    <article class="card text-center" style="background: var(--surface); border: 1px solid rgba(255, 255, 255, 0.06); border-radius: var(--radius); padding: 1.5rem; text-align: center; pointer-events: none;">
+                        <img src="../img/integrantes/inici_arnau.jpg" alt="Foto de Arnau Milrado" style="width: 100%; aspect-ratio: 4/3; border-radius: 6px; margin-bottom: 1rem; object-fit: cover;" />
+                        <h3 style="font-size: 1.2rem; margin-bottom: 0.25rem;">Arnau Milrado</h3>
+                        <p style="color: var(--text-muted); margin: 0; font-size: 0.95rem;" data-i18n="arnau_role">Disseny web i administrador de sistemes.</p>
+                    </article>
+
+                    <article class="card text-center" style="background: var(--surface); border: 1px solid rgba(255, 255, 255, 0.06); border-radius: var(--radius); padding: 1.5rem; text-align: center; pointer-events: none;">
+                        <img src="../img/integrantes/inici_sergi.jpg" alt="Foto de Sergi Fernandez" style="width: 100%; aspect-ratio: 4/3; border-radius: 6px; margin-bottom: 1rem; object-fit: cover;" />
+                        <h3 style="font-size: 1.2rem; margin-bottom: 0.25rem;">Sergi Fernandez</h3>
+                        <p style="color: var(--text-muted); margin: 0; font-size: 0.95rem;" data-i18n="sergi_role">Administrador de sistemes.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="proces" class="section" aria-labelledby="proces-title">
+            <div class="container">
+                <h2 id="proces-title"><a href="#" style="color:inherit;text-decoration:none;"
+                        data-i18n="how_we_work">Com
+                        treballem</a></h2>
+                <ol class="steps">
+                    <li>
+                        <h3 data-i18n="step1_title">1. Concepte</h3>
+                        <p data-i18n="step1_desc">Brainstorming i disseny de les mecàniques principals i l'art visual.
+                        </p>
+                    </li>
+                    <li>
+                        <h3 data-i18n="step2_title">2. Prototip</h3>
+                        <p data-i18n="step2_desc">Creació d'una versió jugable bàsica per testejar la diversió.</p>
+                    </li>
+                    <li>
+                        <h3 data-i18n="step3_title">3. Producció</h3>
+                        <p data-i18n="step3_desc">Desenvolupament complet, creació d'assets, so i programació.</p>
+                    </li>
+                    <li>
+                        <h3 data-i18n="step4_title">4. Llançament</h3>
+                        <p data-i18n="step4_desc">Publicació, màrqueting i suport post-llançament per a la comunitat.
+                        </p>
+                    </li>
+                </ol>
+            </div>
+        </section>
+
+        <section id="solucions" class="section section-alt" aria-labelledby="solucions-title">
+            <div class="container">
+                <h2 id="solucions-title"><a href="#" style="color:inherit;text-decoration:none;"
+                        data-i18n="dev_philosophy">Filosofia de Desenvolupament</a></h2>
+                <div class="grid">
+                    <div>
+                        <p data-i18n="philosophy_lead">A MAINSAR Entertainment, creiem que els videojocs són per a tothom. El nostre enfocament combina motors accessibles per oferir tant remakes de jocs clàssics en PICO-8 com noves experiències interactives en Ren'Py.</p>
+                        <p data-i18n="philosophy_closing">No només creem jocs; creem comunitats i records que perduren
+                            molt després de deixar el
+                            comandament.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer" role="contentinfo">
+        <div class="container footer-inner">
+            <div>
+                <strong>MAINSAR Entertainment</strong>
+                <p class="small" data-i18n="footer_slogan">Creant els mons del demà, avui.</p>
+            </div>
+            <nav aria-label="Peu de pàgina">
+                <ul>
+                    <li><a href="../jocs/" data-i18n="nav_games">Jocs</a></li>
+                    <li><a href="../equip/" data-i18n="nav_team">Equip</a></li>
+                    <li><a href="../promocions/" data-i18n="nav_promo">Promocions</a></li>
+                    <li><a href="../contacte/" data-i18n="nav_contact">Contacte</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="container">
+            <p class="small mute" data-i18n="footer_copyright">© <span id="any">2026</span> MAINSAR Entertainment</p>
+        </div>
+    </footer>
+</body>
+
+</html>

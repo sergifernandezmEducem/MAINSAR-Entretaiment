@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="ca">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Notícies — MAINSAR Entertainment</title>
+  <meta name="description" content="Segueix l'actualitat i els projectes de MAINSAR Entertainment." />
+  <link rel="icon" href="../img/mainsar_fav_icon.png" sizes="any">
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css" />
+  <script src="../js/translations.js"></script>
+  <script src="../js/i18n.js"></script>
+  <style>
+.card {
+
+  border: 4px solid #1B4404; 
+  border-radius: 12px;        
+  overflow: hidden;          
+  box-shadow: 0 6px 0px rgba(0, 0, 0, 0.1); 
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  border-color: #96f00c; 
+  box-shadow: 0 8px 0px rgba(0, 0, 0, 0.15);
+}
+
+.card-body {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.news-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  margin-top: 8px;
+}
+  </style>
+</head>
+
+<body>
+  <a class="skip-link" href="#contingut">Salta al contingut</a>
+<header class="site-header" role="banner">
+        <div class="container header-inner">
+<a class="brand" href="../" aria-label="Inici MAINSAR">
+    <img src="../img/mainsar_fav_icon.png" alt="MAINSAR Entertainment" class="brand-logo-img" />
+</a>
+<div class="header-right">
+    <nav class="site-nav" aria-label="Principal">
+        <ul>
+            <li><a href="../jocs/" data-i18n="nav_games">Jocs</a></li>
+            <li><a href="../equip/" data-i18n="nav_team">Equip</a></li>
+            <li><a href="../noticies/" data-i18n="nav_news">Notícies</a></li>
+            <li><a href="../promocions/" data-i18n="nav_promo">Promocions</a></li>
+            <li><a href="../contacte/" class="btn btn-small" data-i18n="nav_contact">Contacte</a></li>
+        </ul>
+    </nav>
+
+    <div class="lang-switcher">
+        <select id="lang-select" class="lang-select">
+            <option value="ca">Català</option>
+            <option value="es">Español</option>
+            <option value="en">English</option>
+            <option value="fr">Français</option>
+            <option value="de">Deutsch</option>
+            <option value="ja">日本語</option>
+            <option value="it">Italiano</option>
+            <option value="pt">Português</option>
+        </select>
+    </div>
+
+    <button id="theme-toggle" aria-label="Canviar tema" class="btn btn-small">
+        ☀️/🌙
+    </button>
+
+    <script>
+if (localStorage.getItem('theme') === 'light') {
+    document.body.classList.add('light-mode');
+}
+
+const toggleButton = document.getElementById('theme-toggle');
+if (toggleButton) {
+    toggleButton.addEventListener('click', () => {
+        document.body.classList.add('theme-transition');
+        const isLightMode = document.body.classList.toggle('light-mode');
+        localStorage.setItem('theme', isLightMode ? 'light' : 'dark');
+        setTimeout(() => {
+            document.body.classList.remove('theme-transition');
+        }, 600);
+    });
+}
+    </script>
+</div>
+</div>
+</header>
+  <main id="contingut">
+    <section class="section page-hero" aria-labelledby="noticies-title">
+      <div class="container">
+        <h1 id="noticies-title" data-i18n="news_title">Notícies</h1>
+        <p class="section-intro" data-i18n="news_intro">Segueix el dia a dia del nostre desenvolupament.</p>
+      </div>
+    </section>
+    <section class="section">
+      <div class="container">
+        <div class="grid three">
+          <article class="card">
+            <div class="card-body">
+              <h3 data-i18n="news_1_title">Unim forces</h3>
+              <p class="small mute" data-i18n="news_1_date">15 de Novembre, 2025</p>
+              <p data-i18n="news_1_text">Donem la benvinguda a Mainsar, una nova empresa de videojocs formada a partir de quatre nois i el somni de crear noves experiències simples de joc.</p>
+              <img src="../img/modern_mainsar_betterlogo_green.png" alt="Equip de Mainsar Entertainment" class="news-img" />
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-body">
+              <h3 data-i18n="news_2_title">Mainsar al Gaming Fest</h3>
+              <p class="small mute" data-i18n="news_2_date">20 de Desembre, 2025</p>
+              <p data-i18n="news_2_text">El nostre equip va estar present al festival de videojocs local presentant una demo tècnica de Pac-Man per a PICO-8.</p>
+              <img src="../img/DecGamingFestMainsarBooth.png" alt="Mainsar Booth al Gaming Fest" class="news-img" />
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-body">
+              <h3 data-i18n="news_3_title">Nou llançament: Pac-Man per a PICO-8</h3>
+              <p class="small mute" data-i18n="news_3_date">31 de Desembre, 2025</p>
+              <p data-i18n="news_3_text">Bon Nadal! Sé que probablement ja hàgiu fet les vostres cartes als reis mags, pero potser seria hora de modificar-les, perquè hem llançat un nou joc: Pac-Man per a PICO-8. Navega pel laberint, menja totes les boles esparçides pel tauler a Pac-Man, ara per a PICO-8.</p>
+              <img src="../img/game_screenshots/pacman.png" alt="Pac-Man per a PICO-8" class="news-img" />
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-body">
+              <h3 data-i18n="news_4_title">Nous projectes anunciats</h3>
+              <p class="small mute" data-i18n="news_4_date">12 de Gener, 2026</p>
+              <p data-i18n="news_4_text">Ens complau anunciar que hem començat el desenvolupament d'una nova adaptació d'un clàssic (per a anunciar) i un nou joc basat en el motor Ren'Py, mai usat abans en Mainsar.</p>
+              <img src="../img/renpy-deixaespai.avif" alt="Nous projectes en desenvolupament" class="news-img" />
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-body">
+              <h3 data-i18n="news_5_title">Nou llançament: Atharia</h3>
+              <p class="small mute" data-i18n="news_5_date">23 de Gener, 2026</p>
+              <p data-i18n="news_5_text">Ja està a la venda "Atharia", un videojoc nou de preguntes de diversos temes fet dins del motor Ren'Py, una novetat a Mainsar.</p>
+              <img src="../img/game_screenshots/atharianews.png" alt="Llançament de Atharia" class="news-img" />
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-body">
+              <h3 data-i18n="news_6_title">La nostra nova seu!</h3>
+              <p class="small mute" data-i18n="news_6_date">20 de Febrer, 2026</p>
+              <p data-i18n="news_6_text">Mainsar Entertainment ya té seu establerta! Està ubicada dins del carrer Girona de Granollers i desenvoluparem allà els nous llançaments, com la readaptació en desenvolupament anunciada a finals de Gener.</p>
+              <img src="../img/seu/mainsar.headquarters.png" alt="Nova seu de Mainsar Entertainment" class="news-img" />
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-body">
+              <h3 data-i18n="news_7_title">Nou llançament: Buscaminas/Minesweeper</h3>
+              <p class="small mute" data-i18n="news_7_date">17 de Març, 2026</p>
+              <p data-i18n="news_7_text">El remaster tant esperat ja està a la venda! A Mainsar presentem Minesweeper, el clàssic de PC, ara per a PICO-8. Fet per Mainsar Entertainment.</p>
+              <img src="../img/game_screenshots/minesweeper.png" alt="Minesweeper per a PICO-8" class="news-img" />
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-body">
+              <h3 data-i18n="news_8_title">Col·laboració amb New Era Games</h3>
+              <p class="small mute" data-i18n="news_8_date">23 de Maig, 2026</p>
+              <p data-i18n="news_8_text">Ens complau anunciar que hem col·laborat amb la plataforma de jocs New Era Games per a llançar allà el nostre videojoc "Atharia". Es pot comprovar aquí.</p>
+              <img src="../img/game_screenshots/atharianews.png" alt="Col·laboració amb New Era Games" class="news-img" />
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer" role="contentinfo">
+    <div class="container footer-inner">
+      <div>
+        <strong>MAINSAR Entertainment</strong>
+        <p class="small" data-i18n="footer_slogan">Creant els mons del demà, avui.</p>
+      </div>
+      <nav aria-label="Peu de pàgina">
+        <ul>
+          <li><a href="../jocs/" data-i18n="nav_games">Jocs</a></li>
+          <li><a href="../equip/" data-i18n="nav_team">Equip</a></li>
+          <li><a aria-current="page" href="../noticies/" data-i18n="nav_news">Notícies</a></li>
+          <li><a href="../contacte/" data-i18n="nav_contact">Contacte</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="container">
+      <p class="small mute" data-i18n="footer_copyright">© 2026 MAINSAR Entertainment</p>
+    </div>
+  </footer>
+</body>
+
+</html>
