@@ -51,12 +51,10 @@
     </button>
 
     <script>
-// 1. Immediately check for saved theme settings before rendering to avoid screen flashing
 if (localStorage.getItem('theme') === 'light') {
     document.body.classList.add('light-mode');
 }
 
-// 2. Control the click toggle action
 const toggleButton = document.getElementById('theme-toggle');
 if (toggleButton) {
     toggleButton.addEventListener('click', () => {
@@ -64,7 +62,6 @@ if (toggleButton) {
         
         const isLightMode = document.body.classList.toggle('light-mode');
         
-        // Save the chosen state into browser memory
         localStorage.setItem('theme', isLightMode ? 'light' : 'dark');
         
         setTimeout(() => {
